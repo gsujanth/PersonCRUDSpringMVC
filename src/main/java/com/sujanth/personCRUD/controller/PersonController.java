@@ -53,5 +53,17 @@ public class PersonController {
 		model.addAttribute("listPersons", this.personService.listPersons());
 		return "personsView";
 	}
+	
+	@RequestMapping("/ajs")
+	public String ajs() {
+		return "ajs";
+	}
+	
+	@RequestMapping("/ex1")
+	public String ex1(Model model) {
+		model.addAttribute("message", "Hello");
+		model.addAttribute("ex1", "Sujanth");
+		return "ex1";
+	}
 
 }
